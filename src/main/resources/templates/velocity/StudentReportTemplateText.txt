@@ -1,0 +1,58 @@
+<html>
+<body>
+<table style="width:100%;border: 1px solid black;">
+<tr>
+<td><center><h2>$data.college</h2></center></td>
+</tr>
+</table>
+<table style="width:100%;border: 1px solid black;">
+<tr>
+<td>Name</td>
+<td>:</td>
+<td><b>$data.name</b></td>
+</tr>
+<tr>
+<td>Roll Number</td>
+<td>:</td>
+<td>$data.rollNumber</td>
+</tr>
+<tr>
+<td>Percentage</td>
+<td>:</td>
+<td>$data.percentage %</td>
+</tr>
+<tr>
+<td>Is Pass</td>
+<td>:</td>
+<td><b>#if($data.isPass ==true)
+Yes
+#else
+No
+#end</b></td>
+</tr>
+<tr>
+<td>Address</td>
+<td>:</td>
+<td>
+#set( $address = "")
+#if($data.address)
+#set($comma=", ")
+	#if($data.address.housenumber)
+		#set( $address ="$data.address.housenumber")
+	#end
+	#if($data.address.street)
+		#set( $address ="$address$comma$data.address.street")
+	#end
+	#if($data.address.city)
+		#set( $address ="$address$comma$data.address.city")
+	#end
+	#if($data.address.state)
+		#set( $address ="$address$comma$data.address.state")
+	#end
+#end
+<i>$address</i>
+</td>
+</tr>
+</table>
+</body>
+</html>
