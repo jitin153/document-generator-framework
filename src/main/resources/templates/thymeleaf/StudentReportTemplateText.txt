@@ -1,0 +1,26 @@
+<html>
+<body>
+<table style="width:100%;border: 1px solid black;">
+<tr>
+<td><center><h2>[[${data.college}]]</h2></center></td>
+</tr>
+</table>
+<table style="width:100%;border: 1px solid black;">
+<tr>
+<td>Name</td>
+<td>:</td>
+<td><b>[[${data.name}]]</b></td>
+</tr>
+<tr>
+<td>Roll Number</td>
+<td>:</td>
+<td>[[${data.rollNumber}]]</td>
+</tr>
+<tr>
+<td>Percentage</td>
+<td>:</td>
+<td>[[${data.percentage}]] %</td>
+</tr>
+</table>
+</body>
+</html>

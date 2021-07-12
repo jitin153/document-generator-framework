@@ -1,0 +1,29 @@
+<html>
+<head>
+	<style type="text/css">
+		.headerRow{
+			background-color:gray;
+			color:white
+		}
+		.dataRow{
+			background-color:azure;
+		}
+	</style>
+</head>
+<body>
+<table style="width:100%;border: 1px solid black;">
+<tr class="headerRow">
+	<th>ROLL NUMBER</th>
+	<th>NAME</th>
+	<th>PERCENTAGE</th>
+	<th>RESULT</th>
+</tr>
+<tr class="dataRow" th:each="student: ${data}">
+    <td th:text="${student.rollNumber}" />
+    <td th:text="${student.name}" />
+    <td th:text="${student.percentage}" />
+    <td th:text="${student.isPass} ? 'Yes' : 'No'"/>
+</tr>
+</table>
+</body>
+</html>
